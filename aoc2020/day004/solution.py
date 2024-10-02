@@ -2,7 +2,8 @@ import re
 
 
 def solve1(inputfile):
-    data = open(inputfile, "r").read().split("\n\n")
+    with open(inputfile, "r") as f:
+        data = f.read().split("\n\n")
     data = [d.replace("\n", " ").split(" ") for d in data]
     required_fields = [
         "byr",

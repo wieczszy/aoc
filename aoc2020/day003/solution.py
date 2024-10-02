@@ -1,5 +1,6 @@
 def solve1(inputfile):
-    data = open(inputfile, "r").read().split()
+    with open(inputfile, "r") as f:
+        data = f.read().split()
     data = [d * 1000 for d in data]
     c = 0
     y, x = 0, 0
@@ -12,7 +13,8 @@ def solve1(inputfile):
 
 
 def solve2(inputfile):
-    data = open(inputfile, "r").read().split()
+    with open(inputfile, "r") as f:
+        data = f.read().split()
     data = [d * 1000 for d in data]
     slopes = [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)]
     r = 1

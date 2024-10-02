@@ -1,5 +1,6 @@
 def solve1(inputfile):
-    data = open(inputfile, "r").read().splitlines()
+    with open(inputfile, "r") as f:
+        data = f.read().splitlines()
     valid = 0
     for d in data:
         policy = d.split(":")[0].split(" ")
@@ -14,7 +15,8 @@ def solve1(inputfile):
 
 
 def solve2(inputfile):
-    data = open(inputfile, "r").read().splitlines()
+    with open(inputfile, "r") as f:
+        data = f.read().splitlines()
     valid = 0
     for d in data:
         policy = d.split(":")[0].split(" ")

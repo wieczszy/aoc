@@ -1,8 +1,12 @@
 def solve1(inputfile):
+    with open(inputfile, "r") as f:
+        data = f.read()
     pass
 
 
 def solve2(inputfile):
+    with open(inputfile, "r") as f:
+        data = f.read()
     pass
 
 
