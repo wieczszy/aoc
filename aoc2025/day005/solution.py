@@ -18,7 +18,6 @@ def solve1(inputfile):
 
 
 def solve2(inputfile):
-    c = 0
     with open(inputfile) as f:
         x = f.read().split('\n\n')
         fresh = x[0].split('\n')
@@ -33,11 +32,8 @@ def solve2(inputfile):
                 merged[-1] = range(merged[-1].start, max(merged[-1].stop, r.stop))
             else:
                 merged.append(r)
-        
-        for m in merged:
-            c += len(m)
 
-    return c
+    return sum([len(m) for m in merged])
 
 
 if __name__ == "__main__":
